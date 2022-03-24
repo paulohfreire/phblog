@@ -1,3 +1,10 @@
+## Next-react Boilerplate
+
+This repository is to use as a standard configuration to start a new project with react and Next. 
+Use this to code challenges for example, it will save time to build new applications. For
+
+...
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
