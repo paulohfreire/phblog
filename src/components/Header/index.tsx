@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "../../../public/images/logo.svg";
 
 export function Header() {
+  //Configurar Storybook!!!!!!!
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
