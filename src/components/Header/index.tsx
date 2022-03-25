@@ -11,8 +11,6 @@ export function Header() {
           <a className={styles.active}>Home</a>
           <a>Posts</a>
         </nav>
-
-        <button>Sign in with Github</button>
       </div>
     </header>
   );

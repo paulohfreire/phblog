@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "plop": "yarn plop --plopfile ./generators/plopfile.js",
+    "plop": "plop --plopfile ./generators/plopfile.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -26,6 +26,7 @@
     "@storybook/addon-links": "^6.4.19",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
+    "@testing-library/react": "^12.1.4",
     "@types/node": "^17.0.22",
     "@types/react": "^17.0.41",
     "babel-loader": "^8.2.4",

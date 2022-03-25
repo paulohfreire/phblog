@@ -1,5 +1,4 @@
-
-export default function (plop) {
+module.exports = function (plop) {
   plop.setGenerator("component", {
     description: "application component logic",
     prompts: [
