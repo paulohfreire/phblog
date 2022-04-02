@@ -4,8 +4,10 @@ This repository is to use as a standard configuration to start a new project wit
 Use this to code challenges for example, it will save time to build new applications. For
 
 ...
-
-
+## O que utilizar desta página 
+- Usar página inicial como template para futuras aplicações ou landing pages
+- Header
+- Button de login
 
 ## Getting Started
 
