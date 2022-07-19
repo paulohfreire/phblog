@@ -13,7 +13,7 @@
   align-items: center;
 
   nav {
-    margin-left: 5rem;
+    margin-left: 4rem;
     height: 5rem;
 
     a {
@@ -23,6 +23,7 @@
       height: 5rem;
       line-height: 5rem;
       color: var(--gray-300);
+      text-decoration: none;
 
       transition: color 0.2s;
 

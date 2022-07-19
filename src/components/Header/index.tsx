@@ -10,8 +10,10 @@ export function Header() {
       <div className={styles.headerContent}>
         <Image src={logo} alt="ig.news logo" width={100} height={100} />
         <nav>
-          <a className={styles.active}>Home</a>
-          <a>Posts</a>
+          <a href="/" className={styles.active}>
+            Home
+          </a>
+          <a href="/posts">Posts</a>
         </nav>
 
         <SignInButton />
