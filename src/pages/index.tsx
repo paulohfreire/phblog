@@ -1,51 +1,67 @@
-import { GetStaticProps } from "next";
 import Head from "next/head";
-import { SubscribeButton } from "../components/SubscribeButton";
-import { stripe } from "../services/stripe";
+import { getPrismicClient } from "../services/prismicio";
 import styles from "./home.module.scss";
+import { RichText } from "prismic-reactjs";
+import Link from "next/link";
 
-interface HomeProps {
-  product: {
-    priceId: string;
-    amount: number;
-  };
+type Post = {
+  slug: string;
+  title: string;
+  postcontent: string;
+  updatedAt: string;
+};
+
+interface PostsProps {
+  posts: Post[];
 }
 
-export default function Home({ product }: HomeProps) {
+export default function Home({ posts }: PostsProps) {
   return (
     <>
       <Head>
-        <title>Home | ig.news</title>
+        <title>Home | ph.blog</title>
       </Head>
 
       <main className={styles.contentContainer}>
-        <section className={styles.hero}>
-          <span>👏 Olá, Seja bem-vindo</span>
-          <h1>
-            Saiba tudo sobre o mundo <span>React</span> e tecnologia em geral.
-          </h1>
-          <p>
-            Tenha acesso ao conteúdo das publicações <br />
-            <span>por apenas R$ {product.amount}</span>
-          </p>
-          <SubscribeButton priceId={product.priceId} />
-        </section>
-        <img src="/images/avatar.svg" alt="garota em frente a um computador" />
+        <div className={styles.posts}>
+          {posts.map((post) => (
+            <Link href={`/posts/${post.slug}`}>
+              <a key={post.slug}>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>{post.postcontent}</p>
+              </a>
+            </Link>
+          ))}
+        </div>
       </main>
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve("price_1Kwc6PANU4rMqXHr949nkJ5n");
+export const getStaticProps = async () => {
+  const prismic = getPrismicClient();
 
-  const product = {
-    priceId: price.id,
-    amount: price.unit_amount / 100,
-  };
+  const response = await prismic.getByType("post");
+  const posts = response.results.map((post) => {
+    return {
+      title: RichText.asText(post.data.title),
+      postcontent: RichText.asText(post.data.postcontent),
+      updatedAt: new Date(post.last_publication_date).toLocaleDateString(
+        "pt-BR",
+        {
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+        }
+      ),
+      slug: post.uid,
+    };
+  });
+
   return {
     props: {
-      product,
+      posts,
     },
   };
 };
