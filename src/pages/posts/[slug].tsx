@@ -10,11 +10,18 @@ interface PostsProps {
   post: {
     slug: string;
     title: string;
-    imagepost: string;
+    imagepost?: string;
     postcontent: string;
     updatedAt: string;
   };
 }
+
+const ImagePost = ({ post }: PostsProps) => {
+  if (!post.imagepost) {
+    return null;
+  }
+  return <img src={post.imagepost} alt={post.title} />;
+};
 
 export default function Post({ post }: PostsProps) {
   return (
@@ -27,7 +34,7 @@ export default function Post({ post }: PostsProps) {
         <article className={styles.post}>
           <h1>{post.title}</h1>
           <time>{post.updatedAt}</time>
-          <img src={post.imagepost} alt="teste" />
+          <ImagePost post={post} />
           <div
             className={styles.postContent}
             dangerouslySetInnerHTML={{ __html: post.postcontent }}
@@ -44,7 +51,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const response = await prismic.getByUID("post", String(slug), {});
   const post = {
     slug,
-    imagepost: response.data.imagepost.url,
+    imagepost: response.data.imagepost.url || null,
     title: RichText.asText(response.data.title),
     postcontent: RichText.asText(response.data.postcontent),
     updatedAt: new Date(response.last_publication_date).toLocaleDateString(

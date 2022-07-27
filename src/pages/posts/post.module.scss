@@ -2,6 +2,11 @@
   max-width: 1128px;
   margin: 0 auto;
   padding: 0 2rem;
+  @media screen and (max-width: 768px) {
+    img {
+      width: 99%;
+    }
+  }
 }
 
 .post {
@@ -22,9 +27,11 @@
 }
 
 .postContent {
-  margin-top: 2rem;
+  width: auto;
+  margin: 2rem 0;
   line-height: 2rem;
   font-size: 1.125rem;
+  text-align: justify;
   color: var(--gray-100) p, ul {
     margin: 1.5rem 0;
   }
