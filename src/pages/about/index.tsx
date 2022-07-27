@@ -13,7 +13,7 @@ export default function About() {
           <h1>Sobre o blog</h1>
 
           <div className={styles.postContent}>
-            <p>O blog é um projeto criado para ajudar aos desenvolvedores a</p>
+            <p>O blog é um projeto criado para ajudar aos desenvolvedores...</p>
           </div>
         </article>
       </main>

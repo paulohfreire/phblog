@@ -2,12 +2,15 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { RichText } from "prismic-reactjs";
 import { getPrismicClient } from "../../services/prismicio";
+import * as prismicH from "@prismicio/helpers";
+
 import styles from "./post.module.scss";
 
 interface PostsProps {
   post: {
     slug: string;
     title: string;
+    imagepost: string;
     postcontent: string;
     updatedAt: string;
   };
@@ -24,6 +27,7 @@ export default function Post({ post }: PostsProps) {
         <article className={styles.post}>
           <h1>{post.title}</h1>
           <time>{post.updatedAt}</time>
+          <img src={post.imagepost} alt="teste" />
           <div
             className={styles.postContent}
             dangerouslySetInnerHTML={{ __html: post.postcontent }}
@@ -40,6 +44,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const response = await prismic.getByUID("post", String(slug), {});
   const post = {
     slug,
+    imagepost: response.data.imagepost.url,
     title: RichText.asText(response.data.title),
     postcontent: RichText.asText(response.data.postcontent),
     updatedAt: new Date(response.last_publication_date).toLocaleDateString(
