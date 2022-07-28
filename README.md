@@ -1,13 +1,7 @@
-## Next-react Boilerplate
+## PHBLOG
 
-This repository is to use as a standard configuration to start a new project with react and Next. 
-Use this to code challenges for example, it will save time to build new applications. For
-
+This is my first blog made using NextJS, React, Typescript and Prismic CMS
 ...
-## O que utilizar desta página 
-- Usar página inicial como template para futuras aplicações ou landing pages
-- Header
-- Button de login
 
 ## Getting Started
 
