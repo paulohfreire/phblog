@@ -10,6 +10,10 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+          <meta
+            property="og:image"
+            content="https://github.com/paulohfreire/phblog/blob/0b1e08ff616e2fe045f4460b68d14019a083aca4/public/favicon.png"
+          />
         </Head>
         <body>
           <Main />
