@@ -18,11 +18,13 @@ export default function About() {
               sobre a carreira de front-end a qual atuo. Mas também devo trazer
               conteúdos mais abrangentes, como as polêmicas da bolha dev, que
               semanalmente explodem nas redes sociais e acontecimentos
-              macroeconômicos que podem influenciar nossas vidas. No geral o
-              intuito é trazer interação e conteúdo com opinião própria aqui. Em
-              breve devo trazer mais ferramentas a página, novas features e
-              ajustes de design. Por enquanto o importante é entregar algum
-              conteúdo periodicamente.
+              macroeconômicos que podem influenciar nossas vidas.{" "}
+            </p>
+            <p>
+              No geral o intuito é trazer interação e conteúdo com opinião
+              própria aqui. Em breve devo trazer mais ferramentas a página,
+              novas features e ajustes de design. Por enquanto o importante é
+              entregar algum conteúdo periodicamente.
             </p>
           </div>
         </article>
