@@ -29,7 +29,6 @@ Technologies that I used to develop this web client
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [React Router DOM](https://reacttraining.com/react-router/)
 - [Prismic](https://prismic.io/)
 - [NextJS](https://nextjs.org/)
 - [Sass](https://sass-lang.com/)
