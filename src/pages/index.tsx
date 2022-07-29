@@ -22,7 +22,7 @@ export default function Home({ posts }: PostsProps) {
         <title>Home | ph.blog</title>
       </Head>
 
-      <main className={styles.contentContainer}>
+      <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map((post) => (
             <Link href={`/posts/${post.slug}`} key={post.slug}>

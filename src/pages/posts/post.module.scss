@@ -6,6 +6,7 @@
     img {
       width: 99%;
     }
+    -ms-text-size-adjust: 1.625rem;
   }
 }
 
@@ -32,14 +33,5 @@
   line-height: 2rem;
   font-size: 1.125rem;
   text-align: justify;
-  color: var(--gray-100) p, ul {
-    margin: 1.5rem 0;
-  }
-  ul {
-    padding-left: 1.5rem;
-
-    li {
-      margin: 0.5rem 0;
-    }
-  }
+  color: var(--gray-50);
 }

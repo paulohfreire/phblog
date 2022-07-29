@@ -1,6 +1,13 @@
 {
   "_cts": {
-    "post": {}
+    "post": {
+      "postcontent": {
+        "config": {
+          "patternType": "STORY",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "Post": {}
