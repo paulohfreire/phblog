@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Sidebar } from "../../components/Sidebar";
 import styles from "./about.module.scss";
 
 export default function About() {
@@ -9,9 +10,9 @@ export default function About() {
       </Head>
 
       <main className={styles.container}>
+        <Sidebar />
         <article className={styles.post}>
           <h1>Sobre o blog</h1>
-
           <div className={styles.postContent}>
             <p>
               O blog traz informações sobre a área de tecnologia, em especial
