@@ -8,7 +8,7 @@
 </h3>
 
 <p align="center">My first blog to spread tech content</p>
-
+<p align="center">Version: 1.1.0</p>
 <p align="center">
   <a href="#-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

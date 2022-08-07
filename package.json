@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate-next",
-  "version": "0.1.0",
+  "name": "ph-blog",
+  "version": "1.1.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
