@@ -42,7 +42,12 @@ export default function Home({ posts }: PostsProps) {
 export const getStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const response = await prismic.getByType("post");
+  const response = await prismic.getByType("post", {
+    orderings: {
+      field: "document.first_publication_date",
+      direction: "desc",
+    },
+  });
   const posts = response.results.map((post) => {
     return {
       title: RichText.asText(post.data.title),
