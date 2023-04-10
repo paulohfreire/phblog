@@ -1,13 +1,12 @@
 import { GithubLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
 import React from "react";
-import Image from "next/image";
 import styles from "./sidebar.module.scss";
 
 export function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.profile}>
-        <Image
+        <img
           className={styles.cover}
           src="https://github.com/paulohfreire.png"
           alt="Paulo Henrique"
