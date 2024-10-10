@@ -9,10 +9,10 @@ export function Sidebar() {
         <img
           className={styles.cover}
           src="https://github.com/paulohfreire.png"
-          alt="Paulo Henrique"
+          alt="Paulo H Freire"
         />
-        <strong>Paulo Henrique</strong>
-        <span>Frontend engineer</span>
+        <strong>Paulo H. Freire</strong>
+        <span>Software Engineer</span>
       </div>
 
       <footer>
