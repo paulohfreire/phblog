@@ -6,26 +6,26 @@ export default function About() {
   return (
     <>
       <Head>
-        <title> Sobre | ph.blog</title>
+        <title> About | ph.blog</title>
       </Head>
 
       <main className={styles.container}>
         <Sidebar />
         <article className={styles.post}>
-          <h1>Sobre o blog</h1>
+          <h1>About the blog</h1>
           <div className={styles.postContent}>
             <p>
-              O blog traz informações sobre a área de tecnologia, em especial
-              sobre a carreira de front-end a qual atuo. Mas também devo trazer
-              conteúdos mais abrangentes, como as polêmicas da bolha dev, que
-              semanalmente explodem nas redes sociais e acontecimentos
-              macroeconômicos que podem influenciar nossas vidas.{" "}
+              The blog provides information about the technology area,
+              especially about the software development career in which I work.
+              But I must also bring more comprehensive content, such as the dev
+              bubble controversies that arise on social media and macroeconomic
+              events that can influence our lives.{" "}
             </p>
             <p>
-              No geral o intuito é trazer interação e conteúdo com opinião
-              própria aqui. Em breve devo trazer mais ferramentas a página,
-              novas features e ajustes de design. Por enquanto o importante é
-              entregar algum conteúdo periodicamente.
+              In general, the aim is to bring interaction and opinionated
+              content own here. I will soon bring more tools to the page,new
+              features and design adjustments. For now the important thing is
+              deliver some content periodically.
             </p>
           </div>
         </article>
